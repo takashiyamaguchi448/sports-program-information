@@ -1,6 +1,6 @@
 <header class="mb-4">
     <nav class="navbar navbar-expand-sm navbar-dark bg-success"> 
-        <a class="navbar-brand" href="/">Sports program information</a>
+        <a class="navbar-brand" href="/">Sports topics</a>
          
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
             <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,6 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-right">
-                            <li class="dropdown-item"><a href="#">My profile</a></li>
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item">{!! link_to_route('logout.get', 'Logout') !!}</li>
                         </ul>
