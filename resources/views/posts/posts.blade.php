@@ -1,5 +1,5 @@
 <ul class="list-unstyled">
-    @foreach ($microposts as $micropost)
+    @foreach ($posts as $post)
         <li class="media mb-3">
             <div class="media-body">
                 <div>
@@ -19,4 +19,4 @@
         </li>
     @endforeach
 </ul>
-{{ $microposts->links('pagination::bootstrap-4') }}
+{{ $posts->links('pagination::bootstrap-4') }}

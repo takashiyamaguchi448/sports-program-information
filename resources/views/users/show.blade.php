@@ -2,7 +2,9 @@
 
 @section('content')
     <div class="row">
+        
         <div class="col-sm-8">
+           
             @if (Auth::id() == $user->id)
                 {!! Form::open(['route' => 'posts.store']) !!}
                     <div class="form-group">
@@ -11,8 +13,8 @@
                     </div>
                 {!! Form::close() !!}
             @endif
-            @if (count($microposts) > 0)
-                @include('microposts.microposts', ['microposts' => $microposts])
+            @if (count($posts) > 0)
+                @include('posts.posts', ['posts' => $posts])
             @endif
         </div>
     </div>

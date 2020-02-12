@@ -2,7 +2,6 @@
 
 @section('content')
     @if (Auth::check())
-        {{ Auth::user()->name }}
          <div class="col-sm-8">
             @if (count($posts) > 0)
                 @include('posts.posts', ['posts' => $posts])
