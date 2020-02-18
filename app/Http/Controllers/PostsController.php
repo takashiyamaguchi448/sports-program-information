@@ -4,17 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Post;
+
 class PostsController extends Controller
 {
     public function index()
     {
         $data = [];
         if (\Auth::check()) {
-            $user = \Auth::user();
-            $posts = $user->posts()->orderBy('created_at', 'asc')->paginate(10);
+            //$user = \Auth::user();
+            $posts = Post::orderBy('created_at', 'asc')->paginate(10);
             
             $data = [
-                'user' => $user,
+                //'user' => $user,
                 'posts' => $posts,
             ];
         }
