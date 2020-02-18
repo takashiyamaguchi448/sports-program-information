@@ -42,7 +42,7 @@ class User extends Authenticatable
         // 既にお気に入りにしているかの確認
         $exist = $this->is_favorite($postId);
         // 相手が自分自身ではないかの確認
-        //$its_me = $this->id == $micropostId;
+        $its_me = $this->id == $micropostId;
     
         if ($exist) {
             // 既にお気に入りにしていれば何もしない
