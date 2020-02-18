@@ -4,7 +4,7 @@
     <div class="row">
         
         <div class="col-sm-8">
-           
+            @include('users.navtabs', ['user' => $user])
             @if (Auth::id() == $user->id)
                 {!! Form::open(['route' => 'posts.store']) !!}
                     <div class="form-group">

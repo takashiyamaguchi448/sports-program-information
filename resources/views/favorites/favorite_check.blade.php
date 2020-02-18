@@ -8,12 +8,7 @@
                 <div>
                     {!! link_to_route('users.show', $post->user->name, ['id' => $post->user->id]) !!} <span class="text-muted">posted at {{ $post->created_at }}</span>
                 </div>
-                <div class="d-flex flex-row">
-                    @if (Auth::id() == $post->user_id)
-                        {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'delete']) !!}
-                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
-                        {!! Form::close() !!}
-                    @endif
+                <div>
                     @include('favorites.favorite_button', ['posts' => $posts])
                 </div>
             </div>
