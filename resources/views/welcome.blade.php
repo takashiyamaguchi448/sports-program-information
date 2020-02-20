@@ -3,6 +3,11 @@
 @section('content')
     @if (Auth::check())
          <div class="col-sm-8">
+            <form method="get" action="/search">
+                <label for="word">検索キーワード</label>
+                <input type="text" name="word">
+                <input type="submit" value="検索">
+            </form> 
             @if (count($posts) > 0)
                 @include('posts.posts', ['posts' => $posts])
             @endif
